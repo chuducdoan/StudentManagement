@@ -1,36 +1,35 @@
-import { useAppDispatch, useAppSelector } from "app/hooks";
+import { useAppSelector } from "app/hooks";
 import { darkTheme, lightTheme } from "common/style/themes";
-import { selectTheme, setTheme } from "features/theme/themeSlice";
-import i18next from "i18next";
-import Login from "pages/Login";
-import { useTranslation } from "react-i18next";
+import { Loading } from "components";
+import { selectTheme } from "features/theme/themeSlice";
+import { DefaultLayout } from "layout";
+import { Suspense, lazy } from "react";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import "./App.css";
-import {} from "react-router-dom";
+
+const Dashboard = lazy(() => import("pages/Dashboard"));
+const Login = lazy(() => import("pages/Login"));
 
 function App() {
-  const { t } = useTranslation("translation");
   const theme = useAppSelector(selectTheme);
-  const dispatch = useAppDispatch();
 
-  const changeLanguage = (value: string) => {
-    console.log(value);
-    i18next.changeLanguage(value);
-  };
-
-  const handleChangeTheme = (value: any) => {
-    dispatch(
-      setTheme({
-        selectTheme: value,
-      })
-    );
+  const getLoading = () => {
+    return <Loading />;
   };
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <div className="App">
-        <Login />
-      </div>
+      <Router forceRefresh>
+        <Suspense fallback={getLoading()}>
+          <Switch>
+            <Route path={"/login"} component={Login} />
+            <DefaultLayout>
+              <Route path={"/dashboard"} component={Dashboard} />
+            </DefaultLayout>
+          </Switch>
+        </Suspense>
+      </Router>
     </ThemeProvider>
   );
 }

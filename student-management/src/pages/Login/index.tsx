@@ -7,8 +7,11 @@ import * as S from "./styles";
 import { ButtonComponent, InputComponent } from "components";
 import GoogleIcon from "assets/images/icon/search.png";
 import AppleIcon from "assets/images/icon/apple.png";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
+  const history = useHistory();
+
   return (
     <S.Container>
       <S.Left>
@@ -29,7 +32,7 @@ const Login = () => {
       </S.Left>
       <S.Right>
         <S.WrapFormLogin>
-          <form action="">
+          <div>
             <S.TitleSignin>Sign In</S.TitleSignin>
             <S.SubTitleSignin>Your Social Campaigns</S.SubTitleSignin>
             <S.WrapBtnSocial>
@@ -73,11 +76,12 @@ const Login = () => {
                 colorhover="#fff"
                 fontsize={16}
                 bghover="#3d3690"
+                onClick={() => history.push("/dashboard")}
               >
                 Sign in
               </ButtonComponent>
             </S.FormGroup>
-          </form>
+          </div>
         </S.WrapFormLogin>
       </S.Right>
     </S.Container>

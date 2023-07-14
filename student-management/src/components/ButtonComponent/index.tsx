@@ -14,6 +14,7 @@ interface Props {
   bordercolorhover?: string;
   fullwidth?: boolean;
   fontsize?: number;
+  onClick?: any;
 }
 
 const ButtonComponent = ({
@@ -30,6 +31,7 @@ const ButtonComponent = ({
   bordercolorhover,
   fullwidth,
   fontsize,
+  onClick,
 }: Props) => {
   return (
     <S.Container
@@ -44,6 +46,7 @@ const ButtonComponent = ({
       fullwidth={fullwidth}
       minWidth={minWidth}
       fontsize={fontsize}
+      onClick={onClick}
     >
       {children}
     </S.Container>

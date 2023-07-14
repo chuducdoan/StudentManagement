@@ -35,6 +35,8 @@ export const WrapTitlePage = styled.div``;
 export const Logo = styled.div`
   padding-top: 48px;
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 `;
 
 export const MainTitle = styled.div`
@@ -44,6 +46,7 @@ export const MainTitle = styled.div`
   margin-bottom: 8px;
   font-family: "Popin-Semibold";
   line-height: 36px;
+  text-align: center;
 `;
 
 export const SubTitle = styled.div`
@@ -51,6 +54,7 @@ export const SubTitle = styled.div`
   margin-bottom: 30px;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.8;
+  text-align: center;
 `;
 
 export const WrapImage = styled.div`
@@ -159,12 +163,14 @@ export const TitleSignin = styled.div`
   font-size: 24px;
   font-family: "Popin-Semibold";
   margin-bottom: 8px;
+  text-align: center;
 `;
 
 export const SubTitleSignin = styled.div`
   font-size: 14px;
   color: #a098ae;
   margin-bottom: 30px;
+  text-align: center;
 `;
 
 export const WrapBtnSocial = styled.div`
@@ -178,6 +184,7 @@ export const Sepertor = styled.div`
   color: #a098ae;
   position: relative;
   margin-bottom: 30px;
+  text-align: center;
 
   &::after,
   &::before {

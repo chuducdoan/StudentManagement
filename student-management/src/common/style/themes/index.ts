@@ -1,5 +1,10 @@
 const darkTheme = {
-  background: "#000",
+  backgroundHeader: "#272738",
+  backgroundBody: "#202020",
+  bgCard: "#272738",
+  colorCard: "#ffffff99",
+  colorMain: "#fff",
+  bgButton: "#202020",
   borderInputColor: "rgba(255, 255, 255, 0.1)",
   bgInput: "#202020",
   color: "#fff",
@@ -7,7 +12,12 @@ const darkTheme = {
 };
 
 const lightTheme = {
-  background: "#fff",
+  backgroundHeader: "rgb(230,235,238)",
+  backgroundBody: "rgb(230,235,238)",
+  bgCard: "#fff",
+  colorCard: "#a098ae",
+  colorMain: "#303972",
+  bgButton: "#fff",
   borderInputColor: "#dddddd",
   color: "#303972",
   inputFocusColor: "#4D44B5",

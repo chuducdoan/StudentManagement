@@ -78,6 +78,19 @@ const GlobalStyle = createGlobalStyle`
     -webkit-box-shadow: inset 0 0 6px rgba(180, 185, 171, 0.3);
     background-color: #c6bad9;
   }
+
+  .language {
+    width: 30px;
+  }
+
+  .ant-dropdown-menu-item {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:hover {
+    background-color: inherit;
+  }
 `;
 
 export default GlobalStyle;
