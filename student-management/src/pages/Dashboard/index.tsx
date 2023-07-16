@@ -141,23 +141,15 @@ const Dashboard = () => {
       <S.WrapTable>
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 30 }}>
           <Col className="gutter-row" span={14}>
-            <S.Card>
+            <S.Card className="wrap-table">
               <S.LabelTable>Unpaid Student Intuition</S.LabelTable>
               <TableComponent />
             </S.Card>
           </Col>
           <Col className="gutter-row" span={10}>
-            <S.Card>
+            <S.Card className="wrap-table">
               <S.TopChart>
-                <S.LabelChart>Finance Map</S.LabelChart>
-                <SelectComponent
-                  defaultValue={"Week"}
-                  options={[
-                    { label: "Week", value: "Week" },
-                    { label: "Month", value: "Month" },
-                    { label: "Year", value: "Year" },
-                  ]}
-                />
+                <S.LabelTable>Finance Map</S.LabelTable>
               </S.TopChart>
               <S.ContentChart>
                 <ColumnChart />

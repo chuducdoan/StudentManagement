@@ -17,6 +17,12 @@ export const Card = styled.div`
     justify-content: space-between;
     align-items: center;
   }
+
+  &.wrap-table {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 16px;
+  }
 `;
 export const InnerCard = styled.div`
   gap: 16px;
@@ -103,4 +109,6 @@ export const LabelTable = styled.div`
   font-family: "Popin-Semibold";
   color: ${({ theme }) => theme.color};
   margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 `;
