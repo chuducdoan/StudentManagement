@@ -1,14 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Col, Row } from "antd";
+import {
+  AreaChart,
+  ColumnChart,
+  SelectComponent,
+  TableComponent,
+} from "components";
 import * as S from "./styles";
-import User from "assets/images/pic-2.png";
 
 const Dashboard = () => {
   return (
     <S.Container>
       <S.WrapCard>
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 30 }}>
-          <Col className="gutter-row" span={6}>
+          <Col className="gutter-row" span={8}>
             <S.Card>
               <S.InnerCard>
                 <S.Round className="violet">
@@ -35,7 +40,7 @@ const Dashboard = () => {
               </S.InnerCard>
             </S.Card>
           </Col>
-          <Col className="gutter-row" span={6}>
+          <Col className="gutter-row" span={8}>
             <S.Card>
               <S.InnerCard>
                 <S.Round className="orange">
@@ -62,7 +67,7 @@ const Dashboard = () => {
               </S.InnerCard>
             </S.Card>
           </Col>
-          <Col className="gutter-row" span={12}>
+          <Col className="gutter-row" span={8}>
             <S.Card>
               <S.InnerCard>
                 <S.Round className="yellow">
@@ -84,18 +89,83 @@ const Dashboard = () => {
                   </svg>
                 </S.Round>
                 <S.TextCard>
-                  <S.LabelCard>Total Teacher</S.LabelCard>
+                  <S.LabelCard>School Balance</S.LabelCard>
                   <S.MainCard>745</S.MainCard>
-                  <S.MoreInforCard>+10% than last month</S.MoreInforCard>
+                  <S.MoreInforCard>$123,456</S.MoreInforCard>
                 </S.TextCard>
               </S.InnerCard>
-              <S.ImageCard>
-                <img src={User} alt="person.png" />
-              </S.ImageCard>
             </S.Card>
           </Col>
         </Row>
       </S.WrapCard>
+      <S.WrapChart>
+        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 30 }}>
+          <Col className="gutter-row" span={12}>
+            <S.Card>
+              <S.TopChart>
+                <S.LabelChart>Balance Analytics</S.LabelChart>
+                <SelectComponent
+                  defaultValue={"Week"}
+                  options={[
+                    { label: "Week", value: "Week" },
+                    { label: "Month", value: "Month" },
+                    { label: "Year", value: "Year" },
+                  ]}
+                />
+              </S.TopChart>
+              <S.ContentChart>
+                <AreaChart />
+              </S.ContentChart>
+            </S.Card>
+          </Col>
+          <Col className="gutter-row" span={12}>
+            <S.Card>
+              <S.TopChart>
+                <S.LabelChart>Finance Map</S.LabelChart>
+                <SelectComponent
+                  defaultValue={"Week"}
+                  options={[
+                    { label: "Week", value: "Week" },
+                    { label: "Month", value: "Month" },
+                    { label: "Year", value: "Year" },
+                  ]}
+                />
+              </S.TopChart>
+              <S.ContentChart>
+                <ColumnChart />
+              </S.ContentChart>
+            </S.Card>
+          </Col>
+        </Row>
+      </S.WrapChart>
+      <S.WrapTable>
+        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 30 }}>
+          <Col className="gutter-row" span={14}>
+            <S.Card>
+              <S.LabelTable>Unpaid Student Intuition</S.LabelTable>
+              <TableComponent />
+            </S.Card>
+          </Col>
+          <Col className="gutter-row" span={10}>
+            <S.Card>
+              <S.TopChart>
+                <S.LabelChart>Finance Map</S.LabelChart>
+                <SelectComponent
+                  defaultValue={"Week"}
+                  options={[
+                    { label: "Week", value: "Week" },
+                    { label: "Month", value: "Month" },
+                    { label: "Year", value: "Year" },
+                  ]}
+                />
+              </S.TopChart>
+              <S.ContentChart>
+                <ColumnChart />
+              </S.ContentChart>
+            </S.Card>
+          </Col>
+        </Row>
+      </S.WrapTable>
     </S.Container>
   );
 };

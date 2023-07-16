@@ -91,6 +91,12 @@ const GlobalStyle = createGlobalStyle`
   .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item:hover {
     background-color: inherit;
   }
+
+  .ant-select-dropdown .ant-select-item {
+    padding-left: 16px;
+    font-family: 'Popin-Regular';
+    font-size: 16px;
+  }
 `;
 
 export default GlobalStyle;

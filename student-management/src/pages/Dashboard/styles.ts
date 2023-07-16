@@ -11,6 +11,12 @@ export const Card = styled.div`
   background-color: ${({ theme }) => theme.bgCard};
   padding: 30px;
   border-radius: 5px;
+
+  &.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 export const InnerCard = styled.div`
   gap: 16px;
@@ -64,4 +70,37 @@ export const MoreInforCard = styled.div`
   color: ${({ theme }) => theme.colorCard};
 `;
 
-export const ImageCard = styled.div``;
+export const ImageCard = styled.div`
+  img {
+    max-width: 200px;
+    max-height: 100%;
+  }
+`;
+
+export const WrapChart = styled.div`
+  margin-top: 30px;
+`;
+
+export const TopChart = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+`;
+export const ContentChart = styled.div``;
+export const LabelChart = styled.div`
+  font-size: 18px;
+  font-family: "Popin-Semibold";
+  color: ${({ theme }) => theme.color};
+`;
+
+export const WrapTable = styled.div`
+  margin-top: 30px;
+`;
+
+export const LabelTable = styled.div`
+  font-size: 18px;
+  font-family: "Popin-Semibold";
+  color: ${({ theme }) => theme.color};
+  margin-bottom: 16px;
+`;

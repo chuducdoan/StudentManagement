@@ -23,5 +23,7 @@ export const Header = styled.div`
 export const Content = styled.div`
   padding: 30px;
   background-color: ${({ theme }) => theme.backgroundBody};
-  flex-grow: 1;
+  // flex-grow: 1;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
 `;
