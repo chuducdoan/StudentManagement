@@ -33,4 +33,51 @@ export const Container = styled.div`
     font-family: "Popin-Regular";
     color: ${({ theme }) => theme.color};
   }
+
+  .ant-pagination .ant-pagination-item-active {
+    border: none;
+  }
+
+  .ant-pagination .ant-pagination-item {
+    height: auto;
+    width: auto;
+    min-width: auto;
+    line-height: unset;
+    height: 30px;
+    overflow: hidden;
+    line-height: 30px;
+  }
+
+  .ant-pagination .ant-pagination-item a {
+    font-family: "Popin-Regular";
+    font-size: 16px;
+    color: #a098ae;
+    height: 30px;
+    width: 30px;
+  }
+
+  .ant-pagination .ant-pagination-item-active a {
+    background-color: #4d44b5;
+    border: none;
+    color: #fff;
+    font-family: "Popin-Regular";
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .ant-pagination .ant-pagination-item-link {
+    color: ${({ theme }) => theme.color};
+  }
+
+  .ant-pagination .ant-pagination-disabled .ant-pagination-item-link {
+    color: rgba(0, 0, 0, 0.25);
+  }
+
+  .ant-table-content .ant-table-tbody .ant-table-row {
+    &:hover {
+      & > td {
+        background: inherit;
+      }
+    }
+  }
 `;

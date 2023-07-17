@@ -1,5 +1,16 @@
 {
   "title": "Translate your react-app with react-i18next",
 
-  "ADD_NEW_STUDENT": "Add New Student"
+  "ADD_NEW_STUDENT": "Add New Student",
+
+  "DASHBOARD_TOTAL_STUDENT": "Total Students",
+  "DASHBOARD_THAN_LAST_MONTH": "than last month",
+  "DASHBOARD_TOTAL_TEACHER": "Total Teacher",
+  "DASHBOARD_SCHOOL_BALANCE": "School Balance",
+  "DASHBOARD_BALANCE_ANALYTICS": "Balance Analytics",
+  "DASHBOARD_FINANCE_MAP": "Finance Map",
+
+  "WEEK": "Week",
+  "MONTH": "Month",
+  "YEAR": "Year"
 }

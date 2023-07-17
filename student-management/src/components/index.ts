@@ -7,3 +7,4 @@ export { default as Loading } from "./Loading";
 export { default as SelectComponent } from "./SelectComponent";
 export { default as Sidebar } from "./Sidebar";
 export { default as TableComponent } from "./TableComponent";
+export { default as Footer } from "./Footer";

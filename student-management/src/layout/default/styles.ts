@@ -7,7 +7,7 @@ export const Container = styled.div`
 export const Sidebar = styled.div`
   width: 280px;
   height: 100vh;
-  flex-shink: 0;
+  flex-shrink: 0;
   background: #4d44b5;
   padding: 20px 20px 0;
 `;
@@ -17,11 +17,11 @@ export const Main = styled.div`
   flex-direction: column;
 `;
 export const Header = styled.div`
-  flex-shink: 0;
+  flex-shrink: 0;
 `;
 
 export const Content = styled.div`
-  padding: 30px;
+  padding: 30px 30px 0;
   background-color: ${({ theme }) => theme.backgroundBody};
   // flex-grow: 1;
   height: calc(100vh - 80px);

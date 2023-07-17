@@ -1,4 +1,4 @@
-import { Header, Sidebar } from "components";
+import { Footer, Header, Sidebar } from "components";
 import * as S from "./styles";
 
 interface Props {
@@ -15,7 +15,10 @@ const DefaultLayout = ({ children }: Props) => {
         <S.Header>
           <Header />
         </S.Header>
-        <S.Content>{children}</S.Content>
+        <S.Content>
+          {children}
+          <Footer />
+        </S.Content>
       </S.Main>
     </S.Container>
   );

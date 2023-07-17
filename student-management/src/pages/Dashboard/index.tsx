@@ -7,8 +7,43 @@ import {
   TableComponent,
 } from "components";
 import * as S from "./styles";
+import { useTranslation } from "react-i18next";
 
 const Dashboard = () => {
+  const { t } = useTranslation();
+
+  const dataSource = [
+    {
+      key: "1",
+      name: "Mike",
+      age: 32,
+      address: "10 Downing Street",
+    },
+    {
+      key: "2",
+      name: "John",
+      age: 42,
+      address: "10 Downing Street",
+    },
+  ];
+
+  const columns = [
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "Age",
+      dataIndex: "age",
+      key: "age",
+    },
+    {
+      title: "Address",
+      dataIndex: "address",
+      key: "address",
+    },
+  ];
   return (
     <S.Container>
       <S.WrapCard>
@@ -33,9 +68,11 @@ const Dashboard = () => {
                   </svg>
                 </S.Round>
                 <S.TextCard>
-                  <S.LabelCard>Total Students</S.LabelCard>
+                  <S.LabelCard>{t("DASHBOARD_TOTAL_STUDENT")}</S.LabelCard>
                   <S.MainCard>932</S.MainCard>
-                  <S.MoreInforCard>+10% than last month</S.MoreInforCard>
+                  <S.MoreInforCard>
+                    +10% {t("DASHBOARD_THAN_LAST_MONTH")}
+                  </S.MoreInforCard>
                 </S.TextCard>
               </S.InnerCard>
             </S.Card>
@@ -60,9 +97,11 @@ const Dashboard = () => {
                   </svg>
                 </S.Round>
                 <S.TextCard>
-                  <S.LabelCard>Total Teacher</S.LabelCard>
+                  <S.LabelCard>{t("DASHBOARD_TOTAL_TEACHER")}</S.LabelCard>
                   <S.MainCard>745</S.MainCard>
-                  <S.MoreInforCard>+10% than last month</S.MoreInforCard>
+                  <S.MoreInforCard>
+                    +10% {t("DASHBOARD_THAN_LAST_MONTH")}
+                  </S.MoreInforCard>
                 </S.TextCard>
               </S.InnerCard>
             </S.Card>
@@ -89,7 +128,7 @@ const Dashboard = () => {
                   </svg>
                 </S.Round>
                 <S.TextCard>
-                  <S.LabelCard>School Balance</S.LabelCard>
+                  <S.LabelCard>{t("DASHBOARD_SCHOOL_BALANCE")}</S.LabelCard>
                   <S.MainCard>745</S.MainCard>
                   <S.MoreInforCard>$123,456</S.MoreInforCard>
                 </S.TextCard>
@@ -103,13 +142,13 @@ const Dashboard = () => {
           <Col className="gutter-row" span={12}>
             <S.Card>
               <S.TopChart>
-                <S.LabelChart>Balance Analytics</S.LabelChart>
+                <S.LabelChart>{t("DASHBOARD_BALANCE_ANALYTICS")}</S.LabelChart>
                 <SelectComponent
                   defaultValue={"Week"}
                   options={[
-                    { label: "Week", value: "Week" },
-                    { label: "Month", value: "Month" },
-                    { label: "Year", value: "Year" },
+                    { label: t("WEEK"), value: "Week" },
+                    { label: t("MONTH"), value: "Month" },
+                    { label: t("YEAR"), value: "Year" },
                   ]}
                 />
               </S.TopChart>
@@ -121,13 +160,13 @@ const Dashboard = () => {
           <Col className="gutter-row" span={12}>
             <S.Card>
               <S.TopChart>
-                <S.LabelChart>Finance Map</S.LabelChart>
+                <S.LabelChart>{t("DASHBOARD_FINANCE_MAP")}</S.LabelChart>
                 <SelectComponent
                   defaultValue={"Week"}
                   options={[
-                    { label: "Week", value: "Week" },
-                    { label: "Month", value: "Month" },
-                    { label: "Year", value: "Year" },
+                    { label: t("WEEK"), value: "Week" },
+                    { label: t("MONTH"), value: "Month" },
+                    { label: t("YEAR"), value: "Year" },
                   ]}
                 />
               </S.TopChart>
@@ -143,17 +182,13 @@ const Dashboard = () => {
           <Col className="gutter-row" span={14}>
             <S.Card className="wrap-table">
               <S.LabelTable>Unpaid Student Intuition</S.LabelTable>
-              <TableComponent />
+              <TableComponent dataSource={dataSource} columns={columns} />
             </S.Card>
           </Col>
           <Col className="gutter-row" span={10}>
             <S.Card className="wrap-table">
-              <S.TopChart>
-                <S.LabelTable>Finance Map</S.LabelTable>
-              </S.TopChart>
-              <S.ContentChart>
-                <ColumnChart />
-              </S.ContentChart>
+              <S.LabelTable>School Expense</S.LabelTable>
+              <TableComponent dataSource={dataSource} columns={columns} />
             </S.Card>
           </Col>
         </Row>

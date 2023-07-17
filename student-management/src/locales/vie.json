@@ -1,5 +1,16 @@
 {
   "title": "Chuyển đổi đa ngôn ngữ với react-i18next",
 
-  "ADD_NEW_STUDENT": "Thêm mới học sinh"
+  "ADD_NEW_STUDENT": "Thêm mới học sinh",
+
+  "DASHBOARD_TOTAL_STUDENT": "Tổng số học sinh",
+  "DASHBOARD_THAN_LAST_MONTH": "hơn tháng trước",
+  "DASHBOARD_TOTAL_TEACHER": "Tổng số giáo viên",
+  "DASHBOARD_SCHOOL_BALANCE": "Số dư trường học",
+  "DASHBOARD_BALANCE_ANALYTICS": "Phân tích số dư",
+  "DASHBOARD_FINANCE_MAP": "Bản đồ tài chính",
+
+  "WEEK": "Tuần",
+  "MONTH": "Tháng",
+  "YEAR": "Năm"
 }
