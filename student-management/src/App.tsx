@@ -9,6 +9,7 @@ import { DefaultLayout } from "layout";
 import { Suspense, lazy } from "react";
 
 const Dashboard = lazy(() => import("pages/Dashboard"));
+const Student = lazy(() => import("pages/Student"));
 const Login = lazy(() => import("pages/Login"));
 
 function App() {
@@ -23,9 +24,10 @@ function App() {
       <Suspense fallback={getLoading()}>
         <Switch>
           <Route exact path={"/"} children={<Login />} />
-          <Route exact path={"/login"} children={<Login />} />
+          <Route exact path={"/login"} component={Login} />
           <DefaultLayout>
-            <Route exact path={"/dashboard"} children={<Dashboard />} />
+            <Route exact path={"/dashboard"} component={Dashboard} />
+            <Route exact path={"/student"} component={Student} />
           </DefaultLayout>
         </Switch>
       </Suspense>

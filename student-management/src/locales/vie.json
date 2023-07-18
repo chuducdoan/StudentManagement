@@ -3,14 +3,44 @@
 
   "ADD_NEW_STUDENT": "Thêm mới học sinh",
 
+  "DASHBOARD": "Bảng điều khiển",
   "DASHBOARD_TOTAL_STUDENT": "Tổng số học sinh",
   "DASHBOARD_THAN_LAST_MONTH": "hơn tháng trước",
   "DASHBOARD_TOTAL_TEACHER": "Tổng số giáo viên",
   "DASHBOARD_SCHOOL_BALANCE": "Số dư trường học",
   "DASHBOARD_BALANCE_ANALYTICS": "Phân tích số dư",
   "DASHBOARD_FINANCE_MAP": "Bản đồ tài chính",
+  "DASHBOARD_UNPAID_STUDENT_INTUITION": "Trực giác sinh viên không được trả tiền",
+  "DASHBOARD_SCHOOL_EXPENSE": "Chi phí học tập",
+
+  "STUDENTS": "Danh sách học sinh",
 
   "WEEK": "Tuần",
   "MONTH": "Tháng",
-  "YEAR": "Năm"
+  "YEAR": "Năm",
+  "NAME": "Tên",
+  "CLASS": "Lớp",
+  "FEES": "Lệ phí",
+  "RANK": "Thứ hạng",
+  "ACTION": "Thao tác",
+  "EXPENSIVE": "Chi phí",
+  "AMOUNT": "Số tiền",
+  "STATUS": "Trạng thái",
+  "STATUS_COMPLETED": "Hoàn tất",
+  "STATUS_CANCELED": "Hủy bỏ",
+  "DATE": "Ngày",
+  "PARENT_NAME": "Tên bố mẹ",
+  "CITY": "Thành phố",
+  "CONTACT": "Liên hệ",
+  "GRADE": "Cấp",
+  "EDIT": "Sửa",
+  "DELETE": "Xóa",
+
+  "SEARCH_HERE": "Tìm kiếm ở đây...",
+
+  "OPTION_NEWEST": "Mới nhất",
+  "OPTION_OLDEST": "Cũ nhất",
+  "OPTION_RECENT": "Gần đấy",
+
+  "BUTTON_NEW_STUDENT": "Thêm mới học sinh"
 }

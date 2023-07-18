@@ -80,4 +80,45 @@ export const Container = styled.div`
       }
     }
   }
+
+  .ant-table-wrapper .ant-table-column-sorter-up,
+  .ant-table-wrapper .ant-table-column-sorter-down {
+    color: ${({ theme }) => theme.color};
+    opacity: 0.5;
+  }
+
+  .ant-table-wrapper .ant-table-thead th.ant-table-column-has-sorters {
+    &:hover {
+      background: rgba(77, 68, 181, 0.1);
+    }
+  }
+
+  .ant-table-wrapper .ant-table-column-sorter-up.active,
+  .ant-table-wrapper .ant-table-column-sorter-down.active {
+    color: ${({ theme }) => theme.color};
+    opacity: 1;
+  }
+
+  .ant-table-wrapper .ant-table-tbody > tr.ant-table-row-selected:hover > td {
+    background: inherit;
+  }
+
+  .ant-table-wrapper .ant-table-tbody > tr.ant-table-row-selected > td {
+    background: inherit;
+  }
+
+  .ant-checkbox .ant-checkbox-inner {
+    width: 20px;
+    height: 20px;
+  }
+
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #4d44b5;
+    border-color: #4d44b5;
+  }
+
+  .ant-table-cell-row-hover .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #4d44b5;
+    border-color: #4d44b5;
+  }
 `;

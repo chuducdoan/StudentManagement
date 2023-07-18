@@ -6,5 +6,6 @@ export { default as InputComponent } from "./InputComponent";
 export { default as Loading } from "./Loading";
 export { default as SelectComponent } from "./SelectComponent";
 export { default as Sidebar } from "./Sidebar";
-export { default as TableComponent } from "./TableComponent";
+export { default as TableBase } from "./TableComponent/TableBase";
+export { default as TableStudent } from "./TableComponent/TableStudent";
 export { default as Footer } from "./Footer";

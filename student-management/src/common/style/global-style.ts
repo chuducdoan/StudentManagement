@@ -97,6 +97,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Popin-Regular';
     font-size: 16px;
   }
+  
+  .ant-select-dropdown .ant-select-item-option-selected {
+    background-color: rgba(77, 68, 181, 0.1) !important;
+    color: #4D44B5 !important;
+  }
 `;
 
 export default GlobalStyle;

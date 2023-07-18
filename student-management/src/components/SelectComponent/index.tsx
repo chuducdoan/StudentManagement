@@ -1,4 +1,4 @@
-import { Input, InputProps, Select, SelectProps } from "antd";
+import { Select, SelectProps } from "antd";
 import * as S from "./styles";
 
 const SelectComponent = (props: SelectProps) => {

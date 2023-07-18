@@ -3,14 +3,44 @@
 
   "ADD_NEW_STUDENT": "Add New Student",
 
+  "DASHBOARD": "Dashboard",
   "DASHBOARD_TOTAL_STUDENT": "Total Students",
   "DASHBOARD_THAN_LAST_MONTH": "than last month",
   "DASHBOARD_TOTAL_TEACHER": "Total Teacher",
   "DASHBOARD_SCHOOL_BALANCE": "School Balance",
   "DASHBOARD_BALANCE_ANALYTICS": "Balance Analytics",
   "DASHBOARD_FINANCE_MAP": "Finance Map",
+  "DASHBOARD_UNPAID_STUDENT_INTUITION": "Unpaid Student Intuition",
+  "DASHBOARD_SCHOOL_EXPENSE": "School Expense",
+
+  "STUDENTS": "Students",
 
   "WEEK": "Week",
   "MONTH": "Month",
-  "YEAR": "Year"
+  "YEAR": "Year",
+  "NAME": "Name",
+  "CLASS": "class",
+  "FEES": "Fees",
+  "RANK": "Rank",
+  "ACTION": "Action",
+  "EXPENSIVE": "Expensive",
+  "AMOUNT": "Amount",
+  "STATUS": "Status",
+  "STATUS_COMPLETED": "Complete",
+  "STATUS_CANCELED": "Canceled",
+  "DATE": "Date",
+  "PARENT_NAME": "Parent Name",
+  "CITY": "City",
+  "CONTACT": "Contact",
+  "GRADE": "Grade",
+  "EDIT": "Edit",
+  "DELETE": "Delete",
+
+  "SEARCH_HERE": "Search here...",
+
+  "OPTION_NEWEST": "Newest",
+  "OPTION_OLDEST": "Oldest",
+  "OPTION_RECENT": "Recent",
+
+  "BUTTON_NEW_STUDENT": "New Student"
 }

@@ -16,11 +16,18 @@ import { selectTheme, setTheme } from "features/theme/themeSlice";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import * as S from "./styles";
+import { useLocation } from "react-router-dom";
+
+const listTitlePage: any = {
+  "/dashboard": "DASHBOARD",
+  "/student": "STUDENTS",
+};
 
 const Header = () => {
   const theme = useAppSelector(selectTheme);
   const dispatch = useAppDispatch();
   const { t, i18n } = useTranslation("translation");
+  const location = useLocation();
   const items1: MenuProps["items"] = [
     {
       key: "1",
@@ -133,7 +140,7 @@ const Header = () => {
     <S.Container>
       <S.Left>
         <MenuFoldOutlined className="icon-bar" />
-        <S.TitlePage>{t("ADD_NEW_STUDENT")}</S.TitlePage>
+        <S.TitlePage>{t(listTitlePage[location.pathname])}</S.TitlePage>
       </S.Left>
       <S.Right>
         <S.Box onClick={handleChangeTheme}>
