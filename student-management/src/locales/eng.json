@@ -14,12 +14,22 @@
   "DASHBOARD_SCHOOL_EXPENSE": "School Expense",
 
   "STUDENTS": "Students",
+  "STUDENT_DETAIL": "Student Details",
+  "STUDENT_PHOTO": "Photo",
+  "STUDENT_FIRSTNAME": "First Name",
+  "STUDENT_LASTNAME": "Last Name",
+  "STUDENT_DATE_PLACE_BIRTH": "Date & Place of Birth",
+  "STUDENT_PARENT_NAME": "Parent Name",
+  "STUDENT_EMAIL": "Email",
+  "STUDENT_ADDRESS": "Address",
+  "STUDENT_PHONE_NUMBER": "Phone Number",
+  "STUDENT_PARENTS_DETAIL": "Parents Details",
 
   "WEEK": "Week",
   "MONTH": "Month",
   "YEAR": "Year",
   "NAME": "Name",
-  "CLASS": "class",
+  "CLASS": "Class",
   "FEES": "Fees",
   "RANK": "Rank",
   "ACTION": "Action",
@@ -35,6 +45,7 @@
   "GRADE": "Grade",
   "EDIT": "Edit",
   "DELETE": "Delete",
+  "SAVE": "Save",
 
   "SEARCH_HERE": "Search here...",
 

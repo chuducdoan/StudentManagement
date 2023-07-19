@@ -102,6 +102,27 @@ const GlobalStyle = createGlobalStyle`
     background-color: rgba(77, 68, 181, 0.1) !important;
     color: #4D44B5 !important;
   }
+
+  .ant-picker-dropdown
+    .ant-picker-cell-in-view.ant-picker-cell-selected
+    .ant-picker-cell-inner {
+    background: #4d44b5;
+    border-color: #4D44B5;
+    outline: none;
+  }
+
+  .ant-picker-dropdown
+    .ant-picker-cell-in-view.ant-picker-cell-today
+    .ant-picker-cell-inner {
+      &::before {
+        border-color: #4D44B5;
+
+      }
+    }
+
+    .ant-picker-dropdown .ant-picker-today-btn {
+      color: #4D44B5;
+    }
 `;
 
 export default GlobalStyle;

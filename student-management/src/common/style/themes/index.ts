@@ -25,6 +25,7 @@ const lightTheme = {
   colorTextFooter: "#A098AE",
   bgButton: "#fff",
   borderInputColor: "#dddddd",
+  bgInput: "#fff",
   color: "#303972",
   inputFocusColor: "#4D44B5",
 };

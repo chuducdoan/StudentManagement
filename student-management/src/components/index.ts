@@ -9,3 +9,6 @@ export { default as Sidebar } from "./Sidebar";
 export { default as TableBase } from "./TableComponent/TableBase";
 export { default as TableStudent } from "./TableComponent/TableStudent";
 export { default as Footer } from "./Footer";
+export { default as UploadComponent } from "./UploadComponent";
+export { default as DatePickerComponent } from "./DatePickerComponent";
+export { default as Textarea } from "./Textarea";

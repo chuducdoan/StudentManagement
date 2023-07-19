@@ -21,6 +21,7 @@ import { useLocation } from "react-router-dom";
 const listTitlePage: any = {
   "/dashboard": "DASHBOARD",
   "/student": "STUDENTS",
+  "/student/add": "ADD_NEW_STUDENT",
 };
 
 const Header = () => {

@@ -14,6 +14,16 @@
   "DASHBOARD_SCHOOL_EXPENSE": "Chi phí học tập",
 
   "STUDENTS": "Danh sách học sinh",
+  "STUDENT_DETAIL": "Chi tiết học sinh",
+  "STUDENT_PHOTO": "Ảnh",
+  "STUDENT_FIRSTNAME": "Tên",
+  "STUDENT_LASTNAME": "Họ",
+  "STUDENT_DATE_PLACE_BIRTH": "Ngày và nơi sinh",
+  "STUDENT_PARENT_NAME": "Tên bố mẹ",
+  "STUDENT_EMAIL": "Email",
+  "STUDENT_ADDRESS": "Địa chỉ",
+  "STUDENT_PHONE_NUMBER": "Số điện thoại",
+  "STUDENT_PARENTS_DETAIL": "Chi tiết bố mẹ",
 
   "WEEK": "Tuần",
   "MONTH": "Tháng",
@@ -35,6 +45,7 @@
   "GRADE": "Cấp",
   "EDIT": "Sửa",
   "DELETE": "Xóa",
+  "SAVE": "Lưu",
 
   "SEARCH_HERE": "Tìm kiếm ở đây...",
 

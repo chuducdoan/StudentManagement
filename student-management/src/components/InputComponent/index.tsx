@@ -1,9 +1,19 @@
 import { Input, InputProps } from "antd";
 import * as S from "./styles";
 import { useTranslation } from "react-i18next";
+import { NumericFormat } from "react-number-format";
 
 interface PropsInputComp extends InputProps {
   typeInput?: "SEARCH" | "NUMBER";
+}
+
+interface Props {
+  value?: any;
+  placeholder?: string;
+  onChange?: any;
+  disabled?: boolean;
+  name?: string;
+  defaultValue?: any;
 }
 
 const InputSearch = (props: InputProps) => {
@@ -29,6 +39,28 @@ const InputSearch = (props: InputProps) => {
   );
 };
 
+const InputNumber = ({
+  value,
+  placeholder,
+  onChange,
+  disabled,
+  name,
+  defaultValue,
+}: Props) => {
+  return (
+    <S.Container className="input-number">
+      <NumericFormat
+        value={value}
+        placeholder={placeholder}
+        onChange={onChange}
+        disabled={disabled}
+        name={name}
+        defaultValue={defaultValue}
+      />
+    </S.Container>
+  );
+};
+
 const InputBase = (props: InputProps) => {
   return (
     <S.Container>
@@ -39,10 +71,22 @@ const InputBase = (props: InputProps) => {
 
 const InputComponent = (props: PropsInputComp) => {
   const { typeInput, ...rest } = props;
+  const { value, placeholder, onChange, disabled, name, defaultValue } = rest;
   const renderInput = () => {
     switch (typeInput) {
       case "SEARCH":
         return <InputSearch {...rest} />;
+      case "NUMBER":
+        return (
+          <InputNumber
+            value={value}
+            placeholder={placeholder}
+            onChange={onChange}
+            disabled={disabled}
+            name={name}
+            defaultValue={defaultValue}
+          />
+        );
       default:
         return <InputBase {...rest} />;
     }

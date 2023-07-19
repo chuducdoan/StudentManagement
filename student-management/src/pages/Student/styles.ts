@@ -22,6 +22,8 @@ export const RightSearch = styled.div`
 
 export const WrapTable = styled.div`
   background-color: ${({ theme }) => theme.bgCard};
+  border-radius: 5px;
+  overflow: hidden;
 `;
 
 export const WrapNameTable = styled.div`
@@ -56,6 +58,11 @@ export const Id = styled.div`
   color: #4d44b5;
   font-size: 14px;
   font-family: "Popin-Semibold";
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 
 export const TextGray = styled.div`

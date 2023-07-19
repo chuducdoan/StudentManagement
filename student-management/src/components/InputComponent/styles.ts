@@ -46,4 +46,36 @@ export const Container = styled.div`
       cursor: pointer;
     }
   }
+
+  &.input-number {
+    input {
+      height: 48px;
+      padding: 11px 20px;
+      background: ${(theme: any) => theme?.theme?.bgInput};
+      color: ${(theme: any) => theme?.theme?.color};
+      line-height: 1.7;
+      font-size: 14px;
+      font-family: "Popin-Regular";
+      border-color: ${(theme: any) => theme?.theme?.borderInputColor};
+      outline: none;
+      box-shadow: none;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 5px;
+      width: 100%;
+
+      &:hover {
+        border-color: ${(theme: any) => theme?.theme?.borderInputColor};
+      }
+
+      &:focus {
+        box-shadow: none;
+        border-color: ${(theme: any) => theme?.theme.inputFocusColor};
+      }
+
+      &::placeholder {
+        color: #a098ae;
+      }
+    }
+  }
 `;

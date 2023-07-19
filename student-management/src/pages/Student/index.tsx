@@ -10,9 +10,12 @@ import { useTranslation } from "react-i18next";
 import * as S from "./styles";
 import NoUser from "assets/images/no-user.jpg";
 import { Popover } from "antd";
+import { useHistory } from "react-router-dom";
+import { END_POINT } from "common/constant/endPoint";
 
 const Student = () => {
   const { t } = useTranslation();
+  const history = useHistory();
 
   const content = (
     <S.Popover>
@@ -147,7 +150,9 @@ const Student = () => {
       title: "ID",
       dataIndex: "id",
       key: "id",
-      render: (text: any) => <S.Id>{text}</S.Id>,
+      render: (text: any) => (
+        <S.Id onClick={() => handleDetailStudent(text)}>{text}</S.Id>
+      ),
     },
     {
       title: t("DATE"),
@@ -225,6 +230,14 @@ const Student = () => {
     },
   ];
 
+  const handleChangePageAdd = () => {
+    history.push(END_POINT.STUDENT_ADD);
+  };
+
+  const handleDetailStudent = (studentId: any) => {
+    history.push(END_POINT.STUDENT_DETAIL_SHORT + "/" + studentId);
+  };
+
   return (
     <S.Container>
       <S.WrapSearch>
@@ -254,6 +267,7 @@ const Student = () => {
             color="#fff"
             colorhover="#fff"
             bghover="#3d3690"
+            onClick={handleChangePageAdd}
           >
             <PlusOutlined />
             {t("BUTTON_NEW_STUDENT")}
