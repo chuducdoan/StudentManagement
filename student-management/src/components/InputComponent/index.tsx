@@ -5,6 +5,7 @@ import { NumericFormat } from "react-number-format";
 
 interface PropsInputComp extends InputProps {
   typeInput?: "SEARCH" | "NUMBER";
+  handleOnSearch?: any;
 }
 
 interface Props {
@@ -20,7 +21,7 @@ const InputSearch = (props: InputProps) => {
   const { t } = useTranslation();
   return (
     <S.Container className="input-search">
-      <i className="icon-search">
+      <i className="icon-search" onClick={props.onClick}>
         <svg
           width="15"
           height="15"
@@ -71,11 +72,19 @@ const InputBase = (props: InputProps) => {
 
 const InputComponent = (props: PropsInputComp) => {
   const { typeInput, ...rest } = props;
-  const { value, placeholder, onChange, disabled, name, defaultValue } = rest;
+  const {
+    value,
+    placeholder,
+    onChange,
+    disabled,
+    name,
+    defaultValue,
+    handleOnSearch,
+  } = rest;
   const renderInput = () => {
     switch (typeInput) {
       case "SEARCH":
-        return <InputSearch {...rest} />;
+        return <InputSearch {...rest} onClick={handleOnSearch} />;
       case "NUMBER":
         return (
           <InputNumber

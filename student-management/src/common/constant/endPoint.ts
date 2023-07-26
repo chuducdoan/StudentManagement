@@ -5,4 +5,6 @@ export const END_POINT = {
   STUDENT_ADD: "/student/add",
   STUDENT_DETAIL_SHORT: "/student/detail",
   STUDENT_DETAIL: "/student/detail/:studentId",
+
+  TEACHER: "/teacher",
 };

@@ -12,3 +12,5 @@ export { default as Footer } from "./Footer";
 export { default as UploadComponent } from "./UploadComponent";
 export { default as DatePickerComponent } from "./DatePickerComponent";
 export { default as Textarea } from "./Textarea";
+export { default as Search } from "./Search";
+export { default as PaginationComponent } from "./PaginationComponent";

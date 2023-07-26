@@ -26,4 +26,8 @@ export const Content = styled.div`
   // flex-grow: 1;
   height: calc(100vh - 80px);
   overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 `;

@@ -13,6 +13,7 @@ const Dashboard = lazy(() => import("pages/Dashboard"));
 const Student = lazy(() => import("pages/Student"));
 const StudentForm = lazy(() => import("pages/Student/StudentForm"));
 const StudentDetail = lazy(() => import("pages/Student/StudentDetail"));
+const Teacher = lazy(() => import("pages/Teacher"));
 const Login = lazy(() => import("pages/Login"));
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               path={END_POINT.STUDENT_DETAIL}
               component={StudentDetail}
             />
+            <Route exact path={END_POINT.TEACHER} component={Teacher} />
           </DefaultLayout>
         </Switch>
       </Suspense>

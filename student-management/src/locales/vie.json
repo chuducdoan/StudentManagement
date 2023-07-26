@@ -26,6 +26,8 @@
   "STUDENT_PARENTS_DETAIL": "Chi tiết bố mẹ",
   "STUDENT_DATE_TIME": "Ngày giờ",
 
+  "TEACHERS": "Giáo viên",
+
   "WEEK": "Tuần",
   "MONTH": "Tháng",
   "YEAR": "Năm",
@@ -47,6 +49,9 @@
   "EDIT": "Sửa",
   "DELETE": "Xóa",
   "SAVE": "Lưu",
+  "SHOWING": "Đang hiển thị",
+  "FROM": "từ",
+  "DATA": "dữ liệu",
 
   "SEARCH_HERE": "Tìm kiếm ở đây...",
 
@@ -54,5 +59,6 @@
   "OPTION_OLDEST": "Cũ nhất",
   "OPTION_RECENT": "Gần đấy",
 
-  "BUTTON_NEW_STUDENT": "Thêm mới học sinh"
+  "BUTTON_NEW_STUDENT": "Thêm mới học sinh",
+  "BUTTON_NEW_TEACHER": "Thêm mới giáo viên"
 }

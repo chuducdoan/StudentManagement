@@ -26,6 +26,8 @@
   "STUDENT_PARENTS_DETAIL": "Parents Details",
   "STUDENT_DATE_TIME": "Date & Time",
 
+  "TEACHERS": "Teachers",
+
   "WEEK": "Week",
   "MONTH": "Month",
   "YEAR": "Year",
@@ -47,6 +49,9 @@
   "EDIT": "Edit",
   "DELETE": "Delete",
   "SAVE": "Save",
+  "SHOWING": "Showing",
+  "FROM": "from",
+  "DATA": "data",
 
   "SEARCH_HERE": "Search here...",
 
@@ -54,5 +59,6 @@
   "OPTION_OLDEST": "Oldest",
   "OPTION_RECENT": "Recent",
 
-  "BUTTON_NEW_STUDENT": "New Student"
+  "BUTTON_NEW_STUDENT": "New Student",
+  "BUTTON_NEW_TEACHER": "New Teacher"
 }

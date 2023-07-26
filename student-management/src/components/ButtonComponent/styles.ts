@@ -32,6 +32,7 @@ export const Container = styled.button<{
   cursor: pointer;
   transition: all 0.15s ease-in-out;
   min-width: ${({ minWidth }) => (minWidth ? minWidth + "px" : "auto")};
+  border-width: ${({ isBorder }) => (isBorder ? "1px" : "0")};
 
   img {
     max-width: 16px;

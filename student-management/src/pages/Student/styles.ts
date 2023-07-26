@@ -4,22 +4,6 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const WrapSearch = styled.div`
-  background-color: ${({ theme }) => theme.bgCard};
-  border-radius: 5px;
-  padding: 16px 20px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const RightSearch = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 16px;
-`;
-
 export const WrapTable = styled.div`
   background-color: ${({ theme }) => theme.bgCard};
   border-radius: 5px;

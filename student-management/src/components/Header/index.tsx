@@ -24,6 +24,7 @@ const listTitlePage: any = {
   "/student": "STUDENTS",
   "/student/add": "ADD_NEW_STUDENT",
   "/student/detail": "STUDENT_DETAIL",
+  "/teacher": "TEACHERS",
 };
 
 const Header = () => {

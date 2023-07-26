@@ -3,6 +3,7 @@ import { Menu, MenuProps } from "antd";
 import Logo from "assets/images/logo-white.png";
 import { NavLink, useLocation } from "react-router-dom";
 import * as S from "./styles";
+import { END_POINT } from "common/constant/endPoint";
 
 interface Props {
   collapsed?: boolean;
@@ -28,19 +29,19 @@ function getItem(
 
 const items: MenuItem[] = [
   getItem(
-    <NavLink to={"/dashboard"}>Dashboard</NavLink>,
-    "/dashboard",
+    <NavLink to={END_POINT.DASHBOARD}>Dashboard</NavLink>,
+    END_POINT.DASHBOARD,
     <PieChartOutlined />
   ),
   getItem(
-    <NavLink to={"/student"}>Student</NavLink>,
-    "/student",
+    <NavLink to={END_POINT.STUDENT}>Student</NavLink>,
+    END_POINT.STUDENT,
     <MailOutlined />
   ),
 
   getItem(
-    <NavLink to={"/teacher"}>Teacher</NavLink>,
-    "/teacher",
+    <NavLink to={END_POINT.TEACHER}>Teacher</NavLink>,
+    END_POINT.TEACHER,
     <MailOutlined />
   ),
 ];

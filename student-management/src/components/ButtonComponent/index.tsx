@@ -47,6 +47,7 @@ const ButtonComponent = ({
       minWidth={minWidth}
       fontsize={fontsize}
       onClick={onClick}
+      isBorder={isBorder}
     >
       {children}
     </S.Container>

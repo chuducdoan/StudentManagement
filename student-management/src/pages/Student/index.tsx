@@ -1,17 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { EllipsisOutlined, PlusOutlined } from "@ant-design/icons";
-import {
-  ButtonComponent,
-  InputComponent,
-  SelectComponent,
-  TableStudent,
-} from "components";
-import { useTranslation } from "react-i18next";
-import * as S from "./styles";
-import NoUser from "assets/images/no-user.jpg";
+import { EllipsisOutlined } from "@ant-design/icons";
 import { Popover } from "antd";
-import { useHistory } from "react-router-dom";
+import NoUser from "assets/images/no-user.jpg";
 import { END_POINT } from "common/constant/endPoint";
+import { Search, TableStudent } from "components";
+import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
+import * as S from "./styles";
 
 const Student = () => {
   const { t } = useTranslation();
@@ -230,50 +225,30 @@ const Student = () => {
     },
   ];
 
-  const handleChangePageAdd = () => {
-    history.push(END_POINT.STUDENT_ADD);
-  };
-
   const handleDetailStudent = (studentId: any) => {
     history.push(END_POINT.STUDENT_DETAIL_SHORT + "/" + studentId);
   };
 
+  const handleChangePageAdd = () => {
+    history.push(END_POINT.STUDENT_ADD);
+  };
+
+  const handleOnSearch = () => {
+    console.log("Search");
+  };
+
+  const handleOnChange = (val: any) => {
+    console.log(val.target.value);
+  };
+
   return (
     <S.Container>
-      <S.WrapSearch>
-        <div>
-          <InputComponent typeInput="SEARCH" />
-        </div>
-        <S.RightSearch>
-          <SelectComponent
-            defaultValue={"Newest"}
-            options={[
-              {
-                label: t("OPTION_NEWEST"),
-                value: "Newest",
-              },
-              {
-                label: t("OPTION_OLDEST"),
-                value: "Oldest",
-              },
-              {
-                label: t("OPTION_RECENT"),
-                value: "Recent",
-              },
-            ]}
-          />
-          <ButtonComponent
-            minWidth={167}
-            color="#fff"
-            colorhover="#fff"
-            bghover="#3d3690"
-            onClick={handleChangePageAdd}
-          >
-            <PlusOutlined />
-            {t("BUTTON_NEW_STUDENT")}
-          </ButtonComponent>
-        </S.RightSearch>
-      </S.WrapSearch>
+      <Search
+        titleAdd={t("BUTTON_NEW_STUDENT")}
+        changePageAdd={handleChangePageAdd}
+        handleOnSearch={handleOnSearch}
+        handleOnChange={handleOnChange}
+      />
       <S.WrapTable>
         <TableStudent dataSource={dataSource} columns={columns} />
       </S.WrapTable>
