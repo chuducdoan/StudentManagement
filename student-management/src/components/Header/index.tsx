@@ -17,11 +17,13 @@ import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import * as S from "./styles";
 import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const listTitlePage: any = {
   "/dashboard": "DASHBOARD",
   "/student": "STUDENTS",
   "/student/add": "ADD_NEW_STUDENT",
+  "/student/detail": "STUDENT_DETAIL",
 };
 
 const Header = () => {
@@ -29,6 +31,18 @@ const Header = () => {
   const dispatch = useAppDispatch();
   const { t, i18n } = useTranslation("translation");
   const location = useLocation();
+  const [titleRoute, setTitleRoute] = useState("");
+
+  useEffect(() => {
+    if (location.pathname.includes("/student/detail")) {
+      const arrPath = location.pathname.split("/");
+      const result = arrPath.slice(0, arrPath.length - 1);
+      setTitleRoute(result.join("/"));
+    } else {
+      setTitleRoute(location.pathname);
+    }
+  }, [location.pathname]);
+
   const items1: MenuProps["items"] = [
     {
       key: "1",
@@ -141,7 +155,7 @@ const Header = () => {
     <S.Container>
       <S.Left>
         <MenuFoldOutlined className="icon-bar" />
-        <S.TitlePage>{t(listTitlePage[location.pathname])}</S.TitlePage>
+        <S.TitlePage>{t(listTitlePage[titleRoute])}</S.TitlePage>
       </S.Left>
       <S.Right>
         <S.Box onClick={handleChangeTheme}>

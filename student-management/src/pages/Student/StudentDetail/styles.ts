@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
+  padding-bottom: 38px;
 `;
 
 export const ContentDetail = styled.div``;
@@ -163,4 +164,114 @@ export const Status = styled.div`
     background-color: #ffeaea;
     color: #fd5353;
   }
+`;
+
+export const ScheduleDetail = styled.div`
+  padding: 30px;
+  background-color: ${({ theme }) => theme.bgCard};
+  border-radius: 5px;
+  margin-bottom: 30px;
+`;
+
+export const TitleSchedule = styled.div`
+  font-size: 18px;
+  font-family: "Popin-Semibold";
+  color: ${({ theme }) => theme.color};
+  margin-bottom: 8px;
+`;
+
+export const TimeSchedule = styled.div`
+  font-size: 14px;
+  color: #a098ae;
+`;
+
+export const CardSchedule = styled.div`
+  background-color: ${({ theme }) => theme.bgCard};
+  border-radius: 5px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  padding: 24px 30px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+  }
+
+  &.card1 {
+    &::after {
+      background-color: #4d44b5;
+    }
+  }
+
+  &.card2 {
+    &::after {
+      background-color: #fb7d5b;
+    }
+  }
+
+  &.card3 {
+    &::after {
+      background-color: #fcc43e;
+    }
+  }
+
+  &.card4 {
+    &::after {
+      background-color: #303972;
+    }
+  }
+`;
+
+export const TitleCard = styled.div`
+  font-size: 18px;
+  font-family: "Popin-Semibold";
+  color: ${({ theme }) => theme.color};
+  line-height: 27px;
+`;
+
+export const TypeSubject = styled.div`
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #a098ae;
+`;
+
+export const InforSubject = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const TimeSubject = styled.div``;
+
+export const Teacher = styled.div`
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+`;
+
+export const ItemTime = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  .ms-1 {
+    margin-left: 3px;
+    margin-right: 1px;
+  }
+`;
+
+export const TextTime = styled.div`
+  font-size: 14px;
+  color: #a098ae;
 `;

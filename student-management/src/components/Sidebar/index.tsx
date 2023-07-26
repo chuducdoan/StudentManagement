@@ -1,15 +1,8 @@
+import { MailOutlined, PieChartOutlined } from "@ant-design/icons";
 import { Menu, MenuProps } from "antd";
-import * as S from "./styles";
-import {
-  AppstoreOutlined,
-  ContainerOutlined,
-  DesktopOutlined,
-  MailOutlined,
-  PieChartOutlined,
-} from "@ant-design/icons";
-import { NavLink, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
 import Logo from "assets/images/logo-white.png";
+import { NavLink, useLocation } from "react-router-dom";
+import * as S from "./styles";
 
 interface Props {
   collapsed?: boolean;
@@ -50,21 +43,11 @@ const items: MenuItem[] = [
     "/teacher",
     <MailOutlined />
   ),
-  // [
-  //   getItem(
-  //     <NavLink to={"/student/list"}>Student List</NavLink>,
-  //     "/student/list"
-  //   ),
-  //   getItem(
-  //     <NavLink to={"/student/detail"}>Student Detail</NavLink>,
-  //     "/student/detail"
-  //   ),
-  // ]),
 ];
 
 const Sidebar = ({ collapsed }: Props) => {
   const location = useLocation();
-  const pathName = location.pathname;
+  const pathName = location.pathname.split("/")[1];
 
   return (
     <S.Container>
@@ -76,7 +59,7 @@ const Sidebar = ({ collapsed }: Props) => {
         theme="dark"
         inlineCollapsed={collapsed}
         items={items}
-        selectedKeys={[pathName]}
+        selectedKeys={["/" + pathName]}
       />
     </S.Container>
   );
